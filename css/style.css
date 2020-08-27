@@ -89,41 +89,42 @@ img {
     padding: 0 20px;
 }
 
-.hero .content h1{
+.hero .content h1 {
     font-size: 50px;
 }
 
-.hero .content p{
+.hero .content p {
     font-size: 25px;
     max-width: 600px;
     margin: 20px 0 30px;
 }
 
-.hero::before{
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background:rgba(0,0,0,.6);
+    background: rgba(0, 0, 0, .6);
 }
 
-.hero *{
+.hero * {
     z-index: 10;
 }
 
 /* Icons */
-.icons{
+
+.icons {
     padding: 30px;
 }
 
-.icons h3{
+.icons h3 {
     font-weight: bold;
     margin-bottom: 15px;
 }
 
-.icons i{
+.icons i {
     background-color: #007CBA;
     color: #fff;
     padding: 1rem;
@@ -131,6 +132,92 @@ img {
     margin-bottom: 15px;
 }
 
-.cases img:hover{
+.cases img:hover {
     opacity: 0.7;
+}
+
+.team img {
+    border-radius: 2%;
+}
+
+/* Form */
+
+.callback-form {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.callback-form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.callback-form .form-control {
+    margin-bottom: 15px;
+}
+
+.callback-form input {
+    width: 100%;
+    padding: 4px;
+    height: 40px;
+    border: #f5f5f5 1px solid;
+}
+
+.callback-form input:focus {
+    outline-color: #007CBA;
+}
+
+.callback-form .btn {
+    padding: 12px 0;
+    margin-top: 12px;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 200px;
+}
+
+.footer a {
+    color: #fff;
+}
+
+.footer a:hover{
+    color: #007CBA;
+}
+
+.footer .social {
+    margin-right: 30px;
+}
+
+/* Mobile */
+@media(max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+    }
+
+    .navbar a {
+        padding: 10px 10px;
+        margin: 0 3px;
+    }
+
+    .flex-items{
+        flex-direction: column;
+    }
+
+    .flex-columns .column, .flex-grid .column{
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .team img{
+        width: 60%;
+    }
 }

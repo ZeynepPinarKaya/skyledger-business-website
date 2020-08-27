@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,11 +10,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
     <title>Welcome to SkyLedger</title>
 </head>
+
 <body>
     <header class="hero">
         <div class="navbar" id="navbar">
             <h1 class="logo">
-              <span class="text-primary"> <i class="fas fa-book-open"></i>Sky</span>Ledger
+                <span class="text-primary"> <i class="fas fa-book-open"></i>Sky</span>Ledger
             </h1>
             <nav>
                 <ul>
@@ -41,28 +43,31 @@
                     <i class="fas fa-university fa-2x"></i>
                     <div>
                         <h3>Investment Bank</h3>
-                        <p>Lorem sit amet consectetur. Qui nam molestiae sit modi saepe ad impedit necessitatibus perferendis similique mollitia?</p>
+                        <p>Lorem sit amet consectetur. Qui nam molestiae sit modi saepe ad impedit necessitatibus
+                            perferendis similique mollitia?</p>
                     </div>
                 </div>
                 <div>
                     <i class="fas fa-book-reader fa-2x"></i>
                     <div>
                         <h3>Portfolio Manager</h3>
-                        <p>Lorem  dolor sit amet consectetur adipisicing elit. Qui nam molestiae sit modi saepe ad  necessitatibus perferendis similique ?</p>
+                        <p>Lorem dolor sit amet consectetur adipisicing elit. Qui nam molestiae sit modi saepe ad
+                            necessitatibus perferendis similique ?</p>
                     </div>
                 </div>
                 <div>
                     <i class="fas fa-pencil-alt fa-2x"></i>
                     <div>
                         <h3>Tax & Customs</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam molestiae sit modi saepe ad impedit necessitatibus perferendis similique mollitia?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui nam molestiae sit modi saepe ad
+                            impedit necessitatibus perferendis similique mollitia?</p>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <!-- About: Solutions -->
-        <section class="solutions flex-columns">
+        <section id="solutions" class="solutions flex-columns">
             <div class="row">
                 <div class="column">
                     <div class="column-1">
@@ -81,13 +86,14 @@
                 </div>
             </div>
         </section>
-        
+
         <!-- Cases -->
         <section class="cases flex-grid section-padding" id="cases">
             <header class="section-header">
                 <h4>This is what we do</h4>
                 <h2>Business cases</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae animi doloremque eos eum iure beatae?</p>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae animi doloremque eos eum iure beatae?
+                </p>
                 <div class="row">
                     <div class="column">
                         <img src="images/cases/cases1.jpg" alt="">
@@ -107,8 +113,95 @@
                     </div>
                 </div>
             </header>
+        </section>
 
+        <!-- Blog -->
+        <section id="blog" class="blog flex-columns flex-reverse">
+            <div class="row">
+                <div class="column">
+                    <div class="column-1">
+                        <img src="images/home/blog.jpg" alt="">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-2 bg-secondary">
+                        <h4>April 16 2020</h4>
+                        <h2>Blog Post</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, ad.</p>
+                        <a href="" class="btn btn-outline">
+                            <i class="fas fa-chevron"></i>Read Our Blog
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Team  -->
+        <section class="team section-padding" id="team">
+            <header class="section-header">
+                <h4>Who we are</h4>
+                <h2>Our professionals</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae animi doloremque eos eum iure beatae?
+                </p>
+                <div class="flex-items">
+                    <div>
+                        <img src="images/team/person1.jpg" alt="">
+                        <h4>John Does</h4>
+                        <p>President</p>
+                    </div>
+                    <div>
+                        <img src="images/team/person2.jpg" alt="">
+                        <h4>Jane Knows</h4>
+                        <p>Vice President</p>
+                    </div>
+                    <div>
+                        <img src="images/team/person3.jpg" alt="">
+                        <h4>Halley Fox</h4>
+                        <p>Specialist</p>
+                    </div>
+                </div>
+            </header>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact flex-columns">
+            <div class="row">
+                <div class="column">
+                    <div class="column-1">
+                        <img src="images/home/contact.jpg" alt="">
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="column-2 bg-light">
+                        <h2>Request call back</h2>
+                        <form action="" class="callback-form">
+                            <div class="form-control">
+                                <label for="name"></label>
+                                <input type="text" name="name" id="name" placeholder="enter name">
+                            </div>
+                            <div class="form-control">
+                                <label for="email"></label>
+                                <input type="email" name="email" id="email" placeholder="enter email">
+                            </div>
+                            <div class="form-control">
+                                <label for="phone"></label>
+                                <input type="phone" name="phone" id="phone" placeholder="enter phone">
+                            </div>
+                            <input type="submit" value="send" id="submit" class="btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
+
+    <footer class="footer bg-dark">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+        </div>
+        <p>Copyright &copy; 2020 - SkyLedger</p>
+    </footer>
 </body>
 </html>
