@@ -195,6 +195,10 @@ img {
     margin-right: 30px;
 }
 
+.footer .social i {
+    padding: 10px;
+}
+
 /* Mobile */
 @media(max-width: 768px){
     .navbar{
