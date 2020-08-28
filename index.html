@@ -7,13 +7,15 @@
     <script src="https://kit.fontawesome.com/2c19f8d9ca.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/utilities.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon2.ico">
     <title>Welcome to SkyLedger</title>
 </head>
 
 <body>
     <header class="hero">
-        <div class="navbar" id="navbar">
+        <div class="navbar top" id="navbar">
             <h1 class="logo">
                 <span class="text-primary"> <i class="fas fa-book-open"></i>Sky</span>Ledger
             </h1>
@@ -23,6 +25,7 @@
                     <li> <a href="#about">About</a> </li>
                     <li> <a href="#cases">Cases</a> </li>
                     <li> <a href="#blog">Blog</a> </li>
+                    <li> <a href="#team">Team</a> </li>
                     <li> <a href="#contact">Contact</a> </li>
                 </ul>
             </nav>
@@ -96,21 +99,29 @@
                 </p>
                 <div class="row">
                     <div class="column">
-                        <img src="images/cases/cases1.jpg" alt="">
-                        <img src="images/cases/cases2.jpg" alt="">
+                        <a href="images/cases/cases1.jpg" data-lightbox="image-1" data-title="My caption">
+                            <img src="images/cases/cases1.jpg" alt=""></a>
+                        <a href="images/cases/cases2.jpg" data-lightbox="image-2" data-title="Lorem">
+                            <img src="images/cases/cases2.jpg" alt=""></a>
                     </div>
                     <div class="column">
-                        <img src="images/cases/cases3.jpg" alt="">
-                        <img src="images/cases/cases4.jpg" alt="">
+                        <a href="images/cases/cases3.jpg" data-lightbox="image-3" data-title="My caption">
+                            <img src="images/cases/cases3.jpg" alt=""></a>
+                        <a href="images/cases/cases4.jpg" data-lightbox="image-4" data-title="My caption4">
+                            <img src="images/cases/cases4.jpg" alt=""></a>
                     </div>
                     <div class="column">
-                        <img src="images/cases/cases5.jpg" alt="">
-                        <img src="images/cases/cases6.jpg" alt="">
+                        <a href="images/cases/cases5.jpg" data-lightbox="image-5" data-title="My caption5">
+                            <img src="images/cases/cases5.jpg" alt=""></a>
+
+                        <a href="images/cases/cases6.jpg" data-lightbox="image-6" data-title="My caption6">
+                            <img src="images/cases/cases6.jpg" alt=""></a>
                     </div>
                     <div class="column">
-                        <img src="images/cases/cases7.jpg" alt="">
-                        <img src="images/cases/cases8.jpg" alt="">
-                    </div>
+                        <a href="images/cases/cases7.jpg" data-lightbox="image-7" data-title="My caption7">
+                            <img src="images/cases/cases7.jpg" alt=""></a>
+                        <a href="images/cases/cases8.jpg" data-lightbox="image-8" data-title="My caption8">
+                            <img src="images/cases/cases8.jpg" alt=""></a> </div>
                 </div>
             </header>
         </section>
@@ -135,7 +146,7 @@
                 </div>
             </div>
         </section>
-        
+
         <!--Team  -->
         <section class="team section-padding" id="team">
             <header class="section-header">
@@ -204,5 +215,50 @@
         </div>
         <p>Copyright &copy; 2020 - SkyLedger</p>
     </footer>
+    <!-- JS code navbar animation -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+        </script>
+    <script src="js/lightbox.min.js"></script>
+    <script>
+        const navbar = document.getElementById('navbar');
+        let scrolled = false;
+
+        window.onscroll = function () {
+            if (window.pageYOffset > 100) {
+                navbar.classList.remove('top');
+                if (!scrolled) {
+                    navbar.style.transform = 'translateY(-70px)';
+                }
+                setTimeout(function () {
+                    navbar.style.transform = 'translateY(0px)';
+                    scrolled = true;
+                }, 200);
+            }
+            else {
+                navbar.classList.add('top');
+                scrolled = false;
+            }
+        }
+
+        //Smooth scrolling
+        $('#navbar a, .btn').on('click', function (e) {
+            if (this.hash != '') {
+                e.preventDefault();
+
+                const hash = this.hash;
+
+                $('html, body').animate(
+                    {
+                        scrollTop: $(hash).offset().top - 80,
+                    },
+                    800
+                );
+            }
+        }
+        );
+
+    </script>
 </body>
+
 </html>
