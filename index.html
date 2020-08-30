@@ -16,6 +16,7 @@
 <body>
     <header class="hero">
         <div class="navbar top" id="navbar">
+
             <h1 class="logo">
                 <span class="text-primary"> <i class="fas fa-book-open"></i>Sky</span>Ledger
             </h1>
@@ -220,6 +221,7 @@
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
         </script>
     <script src="js/lightbox.min.js"></script>
+
     <script>
         const navbar = document.getElementById('navbar');
         let scrolled = false;
@@ -246,11 +248,18 @@
             if (this.hash != '') {
                 e.preventDefault();
 
+                let offset = 80;
                 const hash = this.hash;
+
+                // small screen offset calc //
+                if (window.innerWidth <= 768) {
+                    offset = 100;
+                }
+                console.log(offset);
 
                 $('html, body').animate(
                     {
-                        scrollTop: $(hash).offset().top - 80,
+                        scrollTop: $(hash).offset().top - offset,
                     },
                     800
                 );
